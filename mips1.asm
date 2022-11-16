@@ -91,6 +91,12 @@ fib:
     move $a0, $t0
     syscall
     
+    li $v0, 4
+    la $a0, newline
+    syscall
+    
+    addi $t5, $t5, 1
+    j loop
     
     done:
     li $v0, 10
