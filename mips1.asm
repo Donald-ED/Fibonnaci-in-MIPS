@@ -1,5 +1,7 @@
 .data
     prompt: .asciiz "Please enter an integer: "
+    illegal: .asciiz "illegal Number"
+    newline: .asciiz "\n"
 .text
 main:
     li $v0, 4
@@ -14,7 +16,7 @@ main:
         bgt $t0, 35, exit
         
         li $v0, 4
-        la $a0, prompt
+        la $a0, illegal
         syscall
         
         li $v0, 4
@@ -52,4 +54,12 @@ fib:
     
     beq $t3, 0, done
     bne $t3, 1, else
-
+    
+    else:
+    li $v0, 1
+    move $a0, t0
+    syscall
+    
+    li $v0, 4        
+    la $a0, newline
+    syscall 
