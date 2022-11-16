@@ -13,5 +13,13 @@ main:
         beq $t0, 0, exit
         bgt $t0, 35, exit
         
+        li $v0, 4
+        la $a0, prompt
+        syscall
+        
+        li $v0, 4
+        la $a0, prompt
+        syscall
+        
         
 
