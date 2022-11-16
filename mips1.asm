@@ -80,3 +80,18 @@ fib:
     li $v0, 4
     la $a0, newline
     syscall
+    
+    loop:
+    beq $t5, $t4, done
+    add $t0, $t1, $t2
+    add $t1, $zero, $t2
+    add $t2, $zero, $t2
+    
+    li $v0, 1
+    move $a0, $t0
+    syscall
+    
+    
+    done:
+    li $v0, 10
+    syscall
