@@ -1,6 +1,7 @@
 .data
     prompt: .asciiz "Please enter an integer: "
-    illegal: .asciiz "illegal Number"
+    output: .asciiz "\nYou typed the number "
+    illegal: .asciiz "illegal Number!\n"
     newline: .asciiz "\n"
 .text
 main:
