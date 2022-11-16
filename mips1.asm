@@ -45,5 +45,11 @@ fib:
     li $t1, 1
     li $t2, 1
     
-        
+    move $t3, $a0
+    sub $t4, $t3, 2
+    li $v0, 1
+    li $t5, 0
+    
+    beq $t3, 0, done
+    bne $t3, 1, else
 
