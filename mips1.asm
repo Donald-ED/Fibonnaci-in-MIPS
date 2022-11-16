@@ -1,4 +1,4 @@
-.text #assembly language instructions
+.text //assembly language instructions
     main: #start of code
     	li $v0, 4 #calls prompt to take in an integer
  	    la $a0, prompt #loads address and puts the interger value in register $a0
