@@ -1,8 +1,3 @@
-.data
-    prompt: .asciiz "Please enter an integer: "
-    output: .asciiz "\nYou typed the number "
-    illegal: .asciiz "illegal Number!\n"
-    newline: .asciiz "\n"
 .text
 main:
     li $v0, 4
@@ -105,3 +100,10 @@ fib:
     done:
     li $v0, 10
     syscall
+
+
+.data
+    prompt: .asciiz "Please enter an integer: "
+    output: .asciiz "\nYou typed the number "
+    illegal: .asciiz "illegal Number!\n"
+    newline: .asciiz "\n"
