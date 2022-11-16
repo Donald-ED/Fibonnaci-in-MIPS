@@ -72,7 +72,7 @@ fib:
     syscall
     
     li $v0, 1
-    la $a0, $t2
+    move $a0, $t2
     syscall
     
     li $v0, 4
